@@ -1,0 +1,82 @@
+@import "./_variables";
+
+.landingPage {
+  // background-color: yellow;
+  padding: 2rem;
+  grid-column: 2 / 3;
+  grid-row: 2/ 3;
+  z-index: 100;
+  align-items: center;
+  color: $color-tertiary;
+
+  display: grid;
+  grid-template-columns: 1fr 60rem 12rem repeat(4, 10rem);
+
+  &__content {
+    background-color: $color-primary;
+    grid-column: 1/2;
+
+    &--header {
+      font-family: Br Firma Bold;
+      font-size: 6.062rem;
+      margin-bottom: 4rem;
+    }
+    &--text {
+      font-family: Br Firma Medium;
+      font-size: 1.388rem;
+      margin-bottom: 4rem;
+    }
+    &--btn {
+      &:link,
+      &:visited {
+        font-size: 1.708rem;
+        color: $color-primary;
+        background-color: $color-secondary;
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 1.4rem 2.9rem;
+        display: inline-block;
+        border-radius: 2.6rem;
+        transition: all 0.2s;
+        position: relative;
+      }
+      &:hover {
+        transform: translateY(-0.5rem);
+        box-shadow: 0 0.4rem 0.4rem rgba(0, 0, 0, 0.12);
+
+        &::after {
+          transform: scaleX(1.4) scaleY(1.6);
+          opacity: 0;
+        }
+      }
+      &:active {
+        transform: translateY(-0.1rem);
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.4);
+      }
+    }
+  }
+  &__image {
+    grid-column: 2/ 6;
+  }
+  &__slide {
+    grid-column: 8 / -1;
+    font-size: 4rem;
+  }
+  &__slide-item {
+    &:link,
+    &:visited {
+      font-size: 0.508rem;
+      background-color: $color-tertiary;
+      padding: 0.8rem;
+      display: inline-block;
+      border-radius: 2.5rem;
+      transition: all 0.2s;
+      // position: relative;
+    }
+    &:active {
+      background-color: $color-primary;
+      border: 0.07rem solid $color-secondary;
+      padding: 1rem;
+    }
+  }
+}

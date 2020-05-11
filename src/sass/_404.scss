@@ -1,0 +1,62 @@
+@import "./_variables";
+
+.page404 {
+  grid-column: 2 / 3;
+  grid-row: 2/3;
+  z-index: 100;
+  background-color: $color-primary;
+
+  display: grid;
+  grid-template-columns: repeat(1fr, 3);
+
+  &__number {
+    font-size: 34.59rem;
+    font-family: Br Firma Bold;
+    color: $color-tertiary;
+  }
+  &__image {
+    margin: 0 0;
+  }
+  &__content {
+    text-align: center;
+
+    &--header {
+      margin-bottom: 0;
+    }
+
+    &--text {
+      font-family: Br Firma Medium;
+      font-size: 1.388rem;
+      margin-bottom: 4rem;
+      color: $color-tertiary;
+    }
+    &--btn {
+      &:link,
+      &:visited {
+        font-size: 1.708rem;
+        color: $color-primary;
+        background-color: $color-secondary;
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 1.4rem 2.9rem;
+        display: inline-block;
+        border-radius: 2.6rem;
+        transition: all 0.2s;
+        position: relative;
+      }
+      &:hover {
+        transform: translateY(-0.5rem);
+        box-shadow: 0 0.4rem 0.4rem rgba(0, 0, 0, 0.12);
+
+        &::after {
+          transform: scaleX(1.4) scaleY(1.6);
+          opacity: 0;
+        }
+      }
+      &:active {
+        transform: translateY(-0.1rem);
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.4);
+      }
+    }
+  }
+}

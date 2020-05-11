@@ -1,0 +1,55 @@
+@import "./_variables";
+
+.header {
+  grid-column: 2 / 3;
+  grid-row: 1/2;
+  z-index: 100;
+
+  display: grid;
+  grid-template-columns: 1fr 40rem 15rem repeat(4, 10rem);
+  align-items: center;
+
+  &__logo {
+    grid-column: 1 / 2;
+    display: flex;
+    align-items: center;
+  }
+  &__nav {
+    grid-column: 4 / -1;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    list-style-type: none;
+    font-size: 2rem;
+    font-family: Br Firma Medium;
+  }
+  &__nav li {
+    color: $color-tertiary;
+  }
+  &__nav > a {
+    text-decoration: none;
+  }
+  &__nav--white li {
+    color: $color-primary;
+  }
+  &__nav--norm li {
+    margin-left: 2rem;
+  }
+}
+
+.logo {
+  &__img {
+    display: block;
+    width: 5.33rem;
+    height: 6.1rem;
+    background-image: url("/../images/gocablogo.svg");
+    margin-right: 1.8rem;
+  }
+  &__text {
+    font-size: 3.05rem;
+    font-family: Br Firma Bold;
+
+    &--green {
+      color: $color-secondary;
+    }
+  }
+}
